@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "734449516669",
+    "project_id": "times-wire",
+    "storage_bucket": "times-wire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734449516669:android:a6e0c1b12cafdc1e65b114",
+        "android_client_info": {
+          "package_name": "com.example.times_wire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734449516669-idfs4cscd2k37jj43765ttgdlbshpptp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYvGk-8I9gQWvKx_vDLCCYy9FNWTkQHLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734449516669-idfs4cscd2k37jj43765ttgdlbshpptp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
