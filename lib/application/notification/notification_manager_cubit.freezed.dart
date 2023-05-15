@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$NotificationManagerState {
   bool get isEnabled => throw _privateConstructorUsedError;
+  String? get articleUrlToNavigate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NotificationManagerStateCopyWith<NotificationManagerState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $NotificationManagerStateCopyWith<$Res> {
           $Res Function(NotificationManagerState) then) =
       _$NotificationManagerStateCopyWithImpl<$Res, NotificationManagerState>;
   @useResult
-  $Res call({bool isEnabled});
+  $Res call({bool isEnabled, String? articleUrlToNavigate});
 }
 
 /// @nodoc
@@ -47,12 +48,17 @@ class _$NotificationManagerStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isEnabled = null,
+    Object? articleUrlToNavigate = freezed,
   }) {
     return _then(_value.copyWith(
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      articleUrlToNavigate: freezed == articleUrlToNavigate
+          ? _value.articleUrlToNavigate
+          : articleUrlToNavigate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -66,7 +72,7 @@ abstract class _$$_NotificationManagerStateCopyWith<$Res>
       __$$_NotificationManagerStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isEnabled});
+  $Res call({bool isEnabled, String? articleUrlToNavigate});
 }
 
 /// @nodoc
@@ -82,12 +88,17 @@ class __$$_NotificationManagerStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isEnabled = null,
+    Object? articleUrlToNavigate = freezed,
   }) {
     return _then(_$_NotificationManagerState(
       isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      articleUrlToNavigate: freezed == articleUrlToNavigate
+          ? _value.articleUrlToNavigate
+          : articleUrlToNavigate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -95,14 +106,17 @@ class __$$_NotificationManagerStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_NotificationManagerState implements _NotificationManagerState {
-  _$_NotificationManagerState({required this.isEnabled});
+  _$_NotificationManagerState(
+      {required this.isEnabled, this.articleUrlToNavigate});
 
   @override
   final bool isEnabled;
+  @override
+  final String? articleUrlToNavigate;
 
   @override
   String toString() {
-    return 'NotificationManagerState(isEnabled: $isEnabled)';
+    return 'NotificationManagerState(isEnabled: $isEnabled, articleUrlToNavigate: $articleUrlToNavigate)';
   }
 
   @override
@@ -111,11 +125,13 @@ class _$_NotificationManagerState implements _NotificationManagerState {
         (other.runtimeType == runtimeType &&
             other is _$_NotificationManagerState &&
             (identical(other.isEnabled, isEnabled) ||
-                other.isEnabled == isEnabled));
+                other.isEnabled == isEnabled) &&
+            (identical(other.articleUrlToNavigate, articleUrlToNavigate) ||
+                other.articleUrlToNavigate == articleUrlToNavigate));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isEnabled);
+  int get hashCode => Object.hash(runtimeType, isEnabled, articleUrlToNavigate);
 
   @JsonKey(ignore: true)
   @override
@@ -126,11 +142,14 @@ class _$_NotificationManagerState implements _NotificationManagerState {
 }
 
 abstract class _NotificationManagerState implements NotificationManagerState {
-  factory _NotificationManagerState({required final bool isEnabled}) =
-      _$_NotificationManagerState;
+  factory _NotificationManagerState(
+      {required final bool isEnabled,
+      final String? articleUrlToNavigate}) = _$_NotificationManagerState;
 
   @override
   bool get isEnabled;
+  @override
+  String? get articleUrlToNavigate;
   @override
   @JsonKey(ignore: true)
   _$$_NotificationManagerStateCopyWith<_$_NotificationManagerState>

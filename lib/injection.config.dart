@@ -78,7 +78,10 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i11.INotificationFacade>(
         () => _i12.NotificationFacade(gh<_i8.SharedPreferences>()));
     gh.factory<_i13.NotificationManagerCubit>(
-        () => _i13.NotificationManagerCubit(gh<_i11.INotificationFacade>()));
+        () => _i13.NotificationManagerCubit(
+              gh<_i11.INotificationFacade>(),
+              gh<_i7.FirebaseMessaging>(),
+            ));
     gh.factory<_i14.TopicCubit>(
         () => _i14.TopicCubit(gh<_i9.IArticleRepository>()));
     gh.singleton<_i15.FavArticleActorCubit>(
