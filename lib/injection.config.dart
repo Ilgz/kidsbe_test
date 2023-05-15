@@ -52,7 +52,7 @@ extension GetItInjectableX on _i1.GetIt {
     );
     final appInjectableProdModule = _$AppInjectableProdModule();
     gh.factory<_i3.ArticleSearcherCubit>(() => _i3.ArticleSearcherCubit());
-    await gh.factoryAsync<_i4.Box<List<_i5.Article>>>(
+    await gh.factoryAsync<_i4.Box<_i5.ArticleList>>(
       () => appInjectableProdModule.cachedArticleBox,
       instanceName: 'cachedArticleBox',
       preResolve: true,
@@ -71,7 +71,7 @@ extension GetItInjectableX on _i1.GetIt {
     );
     gh.lazySingleton<_i9.IArticleRepository>(() => _i10.ArticleRepository(
           gh<_i4.Box<_i5.Article>>(instanceName: 'favArticleUidBox'),
-          gh<_i4.Box<List<_i5.Article>>>(instanceName: 'cachedArticleBox'),
+          gh<_i4.Box<_i5.ArticleList>>(instanceName: 'cachedArticleBox'),
           gh<_i8.SharedPreferences>(),
           gh<_i7.FirebaseMessaging>(),
         ));

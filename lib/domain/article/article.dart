@@ -52,7 +52,12 @@ class ArticleCollection {
         "results": List<dynamic>.from(results.map((x) => x.toJson())),
       };
 }
-
+@HiveType(typeId: 2)
+class ArticleList{
+  @HiveField(0)
+  final List<Article> articleList;
+  ArticleList(this.articleList);
+}
 @HiveType(typeId: 0)
 class Article {
   @HiveField(0)

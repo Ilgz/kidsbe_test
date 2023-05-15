@@ -14,11 +14,9 @@ import 'package:times_wire/presentation/article/article_page.dart';
 import 'package:times_wire/presentation/core/widgets/scaffold_with_bottom.dart';
 
 class AppWidget extends StatelessWidget {
-  final GlobalKey<NavigatorState> navigatorKey;
 
   AppWidget({
     Key? key,
-    required this.navigatorKey,
   }) : super(key: key);
 
   @override
@@ -83,9 +81,10 @@ class AppWidget extends StatelessWidget {
                                 p.initialArticlesFetched !=
                                 c.initialArticlesFetched,
                             listener: (context, state) {
-                              context
-                                  .read<ArticleSliderWatcherCubit>()
-                                  .getSliderArticles();
+                              //TODO Uncomment
+                              // context
+                              //     .read<ArticleSliderWatcherCubit>()
+                              //     .getSliderArticles();
                             }),
                         BlocListener<FavArticleActorCubit, FavArticleActorState>(
                           listenWhen: (p, c) {

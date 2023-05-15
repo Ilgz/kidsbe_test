@@ -14,7 +14,7 @@ abstract class AppInjectableProdModule {
   FirebaseMessaging get firebaseMessaging => FirebaseMessaging.instance;
   @preResolve
   @Named("cachedArticleBox")
-  Future<Box<List<Article>>> get cachedArticleBox =>
+  Future<Box<ArticleList>> get cachedArticleBox =>
       Hive.openBox("cachedArticle");
   @preResolve
   @Named("favArticleUidBox")
